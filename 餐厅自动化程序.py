@@ -14,12 +14,11 @@ print '-' * 40
 
 if item1 in Topping:
     Topping2.append(item1)
-elif item2 in Topping:
+
+if item2 in Topping:
     Topping2.append(item2)
-else:
+
+if Topping2 == []:
     print '\nSorry,we don\'t have these toppings'
-
-last = 'Here are your toppings: {}'
-print last.format(Topping2)
-
-aaaaa
+else:
+    print 'Here are your toppings: {},{}'.format(Topping2[0],Topping2[1])
