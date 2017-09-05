@@ -5,20 +5,25 @@
 
 Topping = ['pepperoni','sausage','cheese']
 
-item1 = raw_input('Please give me a topping: ')
-item2 = raw_input('Please give me one more topping: ')
-Topping2 = []
-
-print '\nYou can check the topping in this Table'
+print '\nYou can check the topping in this Table, q to quit'
 print '-' * 40
+print '\n'
 
-if item1 in Topping:
-    Topping2.append(item1)
+while True:
 
-if item2 in Topping:
-    Topping2.append(item2)
+    Topping2 = []
+    item1 = raw_input('Please give me a topping: ')
+    item2 = raw_input('Please give me one more topping: ')
 
-if Topping2 == []:
-    print '\nSorry,we don\'t have these toppings'
-else:
-    print 'Here are your toppings: {},{}'.format(Topping2[0],Topping2[1])
+    if item1 in Topping:
+        Topping2.append(item1)
+
+    if item2 in Topping:
+        Topping2.append(item2)
+
+    if Topping2 == []:
+        print '\nSorry,we don\'t have these toppings\n'
+    else:
+        print 'Here are your toppings: {},{}\n'.format(Topping2[0],Topping2[1])
+
+print 'Goodbye!'
